@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
     
 </head>
@@ -29,16 +33,18 @@
         <img class="clickImg" id="crystal" src="assets/images/crystal.png"> -->
     </div>
 
-    <div class="score">SCORE
-        <span class="tallied_total"></span>
+    <div class="score"><h2>SCORE</h2>
+       <h2><span class="tallied_total"></span></h2>
     </div>
 
     <div class="reset">
-        <button class="reset_game">Play Again</button>
+        
+        <button type="button" class="btn btn-light btn-lg reset_game">Play Again</button>
+        <!-- <button class="reset_game">Play Again</button> -->
     </div>
 
     <div class="wins_loss">Wins: <span class="win"></span>
-                            Losses: <span class="loss"></span>
+                        Losses: <span class="loss"></span>
     </div>
 
 </div>
