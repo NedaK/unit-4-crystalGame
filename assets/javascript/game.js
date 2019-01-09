@@ -1,6 +1,8 @@
 
 
 $(document).ready(function(){
+
+    //array of crystal objects
     var crystals = [
     {name: "diamond",
      number: function(){
@@ -26,16 +28,13 @@ $(document).ready(function(){
 
     ];
 
-
+    //game variables
     var total_score = 0;
     var win = 0;
     var loss = 0;
-    // var diamond_rand = diamond.number();
-    // var pear_rand = pear.number();
-    // var gem_rand = gem.number();
-    // var crystal_rand = crystal.number();
     var targetNumber = Math.floor(Math.random() * 101) + 19;
 
+    //create the html structure for each crystal object
     function gameStart(){
         for (var i = 0; i< crystals.length; i++){
             var gemImg = $("<img>");
@@ -54,7 +53,7 @@ $(document).ready(function(){
 
     };
 
-
+    //check if player has lost
     function hasLost(){
         if (total_score > targetNumber){
             loss++;
@@ -68,7 +67,7 @@ $(document).ready(function(){
             return false;
         }
     };
-
+    //check if player has won
     function hasWon(){
         if (total_score === targetNumber){
             win++;
@@ -81,8 +80,8 @@ $(document).ready(function(){
     };
 
 
-    //Start Game Play.....
-    gameStart();
+    
+   // main logic for game....
     function runGame(){
          $(".clickImg").on("click", function(){
              var gem_score = parseInt($(this).attr("rand-value"));
@@ -99,10 +98,12 @@ $(document).ready(function(){
            
          });
     
-        };   
+    }; 
+    //Start Game Play.....
+    gameStart();
     runGame();
 
-       
+    //restart game once lost or won..
     $(".reset_game").on("click", function(){
         total_score = 0;
         
